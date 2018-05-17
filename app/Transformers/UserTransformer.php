@@ -4,11 +4,11 @@ namespace App\Transformers;
 
 use App\User;
 
-class UserTransformer extends League\Fractal\TransformerAbstract
+class UserTransformer extends \League\Fractal\TransformerAbstract
 {
     public function transform(User $user)
     {
-        $scope = $this->getCurrentScope()->getIdentifer();
+        $scope = $this->getCurrentScope()->getIdentifier();
 
         return [
         'id' => $user->id,

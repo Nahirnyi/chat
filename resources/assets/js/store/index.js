@@ -4,7 +4,7 @@ import conversations from './modules/conversations'
 
 Vue.use(Vuex)
 
-expport default new Vuex.store({
+expport default new Vuex.Store({
 	modules: {
 		conversations
 	}

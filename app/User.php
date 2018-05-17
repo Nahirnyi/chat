@@ -29,7 +29,7 @@ class User extends Authenticatable
 
     public function conversations()
     {
-        return $this->belongTo(Conversation::class)->whereNull('parent_id')->orderBy('last_reply', 'desc');
+        return $this->belongsToMany(Conversation::class)->whereNull('parent_id')->orderBy('last_reply', 'desc');
     }
 
     public function isInConversation(Conversation $conversation)
